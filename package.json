@@ -1,5 +1,5 @@
 {
-    "name": "hnaf-folio",
+    "name": "folio-template",
     "version": "2.0.0",
     "private": true,
     "scripts": {
@@ -22,6 +22,7 @@
         "class-variance-authority": "^0.7.1",
         "clsx": "^2.1.1",
         "framer-motion": "^11.3.27",
+        "lottie-react": "^2.4.1",
         "lucide-react": "^0.525.0",
         "mini-svg-data-uri": "^1.4.4",
         "next": "14.2.5",
