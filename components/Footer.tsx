@@ -1,3 +1,4 @@
+"use client";
 import { FaLocationArrow } from "react-icons/fa6";
 import { Spotlight } from "./ui/Spotlight";
 import { socialMedia } from "@/data";

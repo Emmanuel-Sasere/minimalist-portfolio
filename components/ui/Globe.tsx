@@ -5,13 +5,17 @@ import ThreeGlobe from "three-globe";
 import { useThree, Object3DNode, Canvas, extend } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import countries from "@/data/globe.json";
+
 declare module "@react-three/fiber" {
   interface ThreeElements {
     threeGlobe: Object3DNode<ThreeGlobe, typeof ThreeGlobe>;
   }
 }
 
-extend({ ThreeGlobe });
+// Only extend if we're in the browser
+if (typeof window !== 'undefined') {
+  extend({ ThreeGlobe });
+}
 
 const RING_PROPAGATION_SPEED = 3;
 const aspect = 1.2;
@@ -261,7 +265,9 @@ export function WebGLRendererConfig() {
   const { gl, size } = useThree();
 
   useEffect(() => {
-    gl.setPixelRatio(window.devicePixelRatio);
+    if (typeof window !== 'undefined') {
+      gl.setPixelRatio(window.devicePixelRatio);
+    }
     gl.setSize(size.width, size.height);
     gl.setClearColor(0xffaaff, 0);
   }, []);
