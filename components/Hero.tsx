@@ -62,10 +62,10 @@ const Hero = () => {
             words={words}
           />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl font-[200]">
-            Experienced Software Developer | Passionate about Building Scalable Applications | Turning Ideas into Robust Software Solutions
+            [Your Professional Title] | [Your Passion or Expertise] | [Your Key Strength or Motto]
           </p>
 
-          <a href="mailto:your-email@example.com?subject=Hey%20I%20have%20a%20project%20in%20mind" target="_blank" className="cursor-pointer">
+          <a href="mailto:[your-email@example.com]?subject=Hey%20I%20have%20a%20project%20in%20mind" target="_blank" className="cursor-pointer">
             <MagicButton
               title="Say HI!"
               icon={<FaLocationArrow />}

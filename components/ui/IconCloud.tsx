@@ -44,54 +44,56 @@ export function IconCloud({ icons, images }: IconCloudProps) {
 
   // Create icon canvases once when icons/images change
   useEffect(() => {
-    if (!icons && !images) return;
+    if (typeof window !== 'undefined') {
+      if (!icons && !images) return;
 
-    const items = icons || images || [];
-    imagesLoadedRef.current = new Array(items.length).fill(false);
+      const items = icons || images || [];
+      imagesLoadedRef.current = new Array(items.length).fill(false);
 
-    const newIconCanvases = items.map((item, index) => {
-      const offscreen = document.createElement("canvas");
-      offscreen.width = 60;  // Increased from 40 to 60
-      offscreen.height = 60; // Increased from 40 to 60
-      const offCtx = offscreen.getContext("2d");
+      const newIconCanvases = items.map((item, index) => {
+        const offscreen = document.createElement("canvas");
+        offscreen.width = 60;  // Increased from 40 to 60
+        offscreen.height = 60; // Increased from 40 to 60
+        const offCtx = offscreen.getContext("2d");
 
-      if (offCtx) {
-        if (images) {
-          // Handle image URLs directly
-          const img = new Image();
-          img.crossOrigin = "anonymous";
-          img.src = items[index] as string;
-          img.onload = () => {
-            offCtx.clearRect(0, 0, offscreen.width, offscreen.height);
+        if (offCtx) {
+          if (images) {
+            // Handle image URLs directly
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+            img.src = items[index] as string;
+            img.onload = () => {
+              offCtx.clearRect(0, 0, offscreen.width, offscreen.height);
 
-            // Create circular clipping path
-            offCtx.beginPath();
-            offCtx.arc(30, 30, 30, 0, Math.PI * 2); // Adjusted for new size
-            offCtx.closePath();
-            offCtx.clip();
-            
-            // Draw the image
-            offCtx.drawImage(img, 0, 0, 60, 60); // Adjusted for new size
+              // Create circular clipping path
+              offCtx.beginPath();
+              offCtx.arc(30, 30, 30, 0, Math.PI * 2); // Adjusted for new size
+              offCtx.closePath();
+              offCtx.clip();
+              
+              // Draw the image
+              offCtx.drawImage(img, 0, 0, 60, 60); // Adjusted for new size
 
-            imagesLoadedRef.current[index] = true;
-          };
-        } else {
-          // Handle SVG icons
-          offCtx.scale(0.6, 0.6); // Adjusted scale for larger size
-          const svgString = renderToString(item as React.ReactElement);
-          const img = new Image();
-          img.src = "data:image/svg+xml;base64," + btoa(svgString);
-          img.onload = () => {
-            offCtx.clearRect(0, 0, offscreen.width, offscreen.height);
-            offCtx.drawImage(img, 0, 0);
-            imagesLoadedRef.current[index] = true;
-          };
+              imagesLoadedRef.current[index] = true;
+            };
+          } else {
+            // Handle SVG icons
+            offCtx.scale(0.6, 0.6); // Adjusted scale for larger size
+            const svgString = renderToString(item as React.ReactElement);
+            const img = new Image();
+            img.src = "data:image/svg+xml;base64," + btoa(svgString);
+            img.onload = () => {
+              offCtx.clearRect(0, 0, offscreen.width, offscreen.height);
+              offCtx.drawImage(img, 0, 0);
+              imagesLoadedRef.current[index] = true;
+            };
+          }
         }
-      }
-      return offscreen;
-    });
+        return offscreen;
+      });
 
-    iconCanvasesRef.current = newIconCanvases;
+      iconCanvasesRef.current = newIconCanvases;
+    }
   }, [icons, images]);
 
   // Generate initial icon positions on a sphere
