@@ -13,7 +13,7 @@ import { BackgroundGradientAnimation } from "./Gradientbg";
 import GridGlobe from "./GridGlobe";
 import LitupButton from "./LitupButton";
 import MagicButton from "./MagicButton";
-import { SparklesCore } from "./Sparkles";
+// import { SparklesCore } from "./Sparkles";
 
 export const BentoGrid = ({
   className,
@@ -128,7 +128,7 @@ export const BentoGridItem = ({
 
             {id === 3 && (
               <>
-                <SparklesCore
+                {/* <SparklesCore
                   id="tsparticlesfullpage"
                   background="transparent"
                   minSize={0.6}
@@ -136,7 +136,7 @@ export const BentoGridItem = ({
                   particleDensity={100}
                   className="w-full h-full"
                   particleColor="#FFFFFF"
-                />
+                /> */}
                 <div className="flex gap-4">
                   <a
                     href="mailto:syahra2014@gmail.com?subject=hey%20i%20have%20a%20project%20in%20mind%20"
