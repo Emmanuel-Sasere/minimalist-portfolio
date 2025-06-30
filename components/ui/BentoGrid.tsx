@@ -9,11 +9,11 @@ import Lottie from "lottie-react";
 import { cn } from "@/lib/utils";
 
 import animationData from "@/data/confetti.json";
-// import { BackgroundGradientAnimation } from "./Gradientbg";
+import { BackgroundGradientAnimation } from "./Gradientbg";
 import GridGlobe from "./GridGlobe";
 import LitupButton from "./LitupButton";
 import MagicButton from "./MagicButton";
-// import { SparklesCore } from "./Sparkles";
+import { SparklesCore } from "./Sparkles";
 
 export const BentoGrid = ({
   className,
@@ -103,11 +103,11 @@ export const BentoGridItem = ({
               </>
             )}
           </div>
-          {/* {id === 6 && (
+          {id === 6 && (
             <BackgroundGradientAnimation>
               <div className="absolute z-50 inset-0 flex items-center justify-center text-white font-bold px-4 pointer-events-none text-3xl text-center md:text-4xl lg:text-7xl"></div>
             </BackgroundGradientAnimation>
-          )} */}
+          )}
 
           <div
             className={cn(
@@ -130,7 +130,7 @@ export const BentoGridItem = ({
 
             {id === 3 && (
               <>
-                {/* <SparklesCore
+                <SparklesCore
                   id="tsparticlesfullpage"
                   background="transparent"
                   minSize={0.6}
@@ -138,7 +138,7 @@ export const BentoGridItem = ({
                   particleDensity={100}
                   className="w-full h-full"
                   particleColor="#FFFFFF"
-                /> */}
+                />
                 <div className="flex gap-4">
                   <a
                     href="mailto:syahra2014@gmail.com?subject=hey%20i%20have%20a%20project%20in%20mind%20"
