@@ -9,7 +9,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
 export const FloatingDock = ({
   items,
@@ -119,10 +119,24 @@ function IconContainer({
   href: string;
 }) {
   let ref = useRef<HTMLDivElement>(null);
+  const [bounds, setBounds] = useState({ x: 0, width: 0 });
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
+    const updateBounds = () => {
+      if (ref.current) {
+        const rect = ref.current.getBoundingClientRect();
+        setBounds({ x: rect.x, width: rect.width });
+      }
+    };
+
+    updateBounds();
+    window.addEventListener('resize', updateBounds);
+    return () => window.removeEventListener('resize', updateBounds);
+  }, []);
 
   let distance = useTransform(mouseX, (val) => {
-    let bounds = ref.current?.getBoundingClientRect() ?? { x: 0, width: 0 };
-
     return val - bounds.x - bounds.width / 2;
   });
 
