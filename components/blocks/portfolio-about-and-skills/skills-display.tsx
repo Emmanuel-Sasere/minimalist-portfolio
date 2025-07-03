@@ -45,7 +45,7 @@ const tools = [
       { name: "Next.js", icon: <FileCode /> },
       { name: "TypeScript", icon: <FileCode /> },
       { name: "Tailwind CSS", icon: <Palette /> },
-      { name: "Material UI", icon: <Palette /> },
+      { name: "ShadeCN UI", icon: <Palette /> },
       { name: "Redux", icon: <Layers /> },
     ],
   },

@@ -26,7 +26,12 @@ const Hero = () => {
   ];
 
   return (
-    <div id="home" className="pb-20 pt-36">
+    <div id="home" className="pb-20 pt-36 relative">
+            <div className="absolute top-10 right-0 z-10">
+            <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FWaqasIshaque1%2Fportfolio-template&project-name=portfolio&repository-name=waqas-ishaque-folio&redirect-url=https%3A%2F%2Fgithub.com%2FWaqasIshaque1&demo-description=portfolio%20template%20created%20by%20waqas%20ishaque&demo-url=https%3A%2F%2Fportfolio-template-six-rust.vercel.app%2F&demo-image=https%3A%2F%2Fgithub.com%2FWaqasIshaque1%2Fportfolio-template%2Fblob%2Fmain%2Fpublic%2Fscr1.png">
+              <img src="https://vercel.com/button" alt="Deploy with Vercel"/>
+            </a>
+          </div>
       <div>
         <Spotlight
           className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
