@@ -210,12 +210,18 @@ export const navItems = [
   export const socialMedia = [
     {
       id: 1,
-      img: "/git.svg",
-      href: "#",
+      img: {
+        src: "/git.svg",
+        alt: "GitHub Icon",
+      },
+      href: "https://github.com/Emmanuel-Sasere",
     },
     {
       id: 2,
-      img: "/link.svg",
-      href: "#",
+      img: {
+        src: "/link.svg",
+        alt: "LinkedIn Icon",
+      },
+      href: "https://www.linkedin.com/in/emmanuelsasere/",
     },
   ];

@@ -3,82 +3,29 @@ import { Badge } from "@/components/ui/badge";
 
 const certifications = [
   {
-    title: "Certification 1",
-    issuer: "Issuer Name",
-    description: "Description of the certification and what it covers.",
-    link: "https://github.com/WaqasIshaque1/portfolio-template"
+    title: "BSC in Computer Science",
+    issuer: "Miva University",
+    description: "Bachelor's degree in Computer Science with a focus on software development, data analysis, system design and check on cybersecurity.",
+    // link: "https://miva.university"
   },
   {
-    title: "Certification 2",
-    issuer: "Issuer Name",
-    description: "Description of the certification and what it covers.",
-    link: "https://github.com/WaqasIshaque1/portfolio-template"
+    title: "Frontend engineering",
+    issuer: "Ekobit Academy",
+    description: "Gained a solid foundation in HTML, CSS, and JavaScript. Learned to build responsive web interfaces and developed practical skills in UI design, layout structuring, and basic interactivity. This training laid the groundwork for my continued growth in frontend development.",
+    // link: "https://github.com/WaqasIshaque1/portfolio-template"
   },
   {
-    title: "Certification 3",
-    issuer: "Issuer Name",
-    description: "Description of the certification and what it covers.",
-    link: "https://github.com/WaqasIshaque1/portfolio-template"
+    title: "React Development Course",
+    issuer: "Andela Learning Community",
+    description: "Completed an immersive React training focused on building scalable, component-based user interfaces. Gained hands-on experience with hooks, state management, and routing while developing real-world applications and following industry best practices.",
+    // link: "https://github.com/WaqasIshaque1/portfolio-template"
   },
-  {
-    title: "Certification 4",
-    issuer: "Issuer Name",
-    description: "Description of the certification and what it covers.",
-    link: "https://github.com/WaqasIshaque1/portfolio-template"
-  },
-  {
-    title: "Certification 5",
-    issuer: "Issuer Name",
-    description: "Description of the certification and what it covers.",
-    link: "https://github.com/WaqasIshaque1/portfolio-template"
-  },
-  {
-    title: "Certification 6",
-    issuer: "Issuer Name",
-    description: "Description of the certification and what it covers.",
-    link: "https://github.com/WaqasIshaque1/portfolio-template"
-  },
-  {
-    title: "Certification 7",
-    issuer: "Issuer Name",
-    description: "Description of the certification and what it covers.",
-    link: "https://github.com/WaqasIshaque1/portfolio-template"
-  },
-  {
-    title: "Certification 8",
-    issuer: "Issuer Name",
-    description: "Description of the certification and what it covers.",
-    link: "https://github.com/WaqasIshaque1/portfolio-template"
-  },
-  {
-    title: "Certification 9",
-    issuer: "Issuer Name",
-    description: "Description of the certification and what it covers.",
-    link: "https://github.com/WaqasIshaque1/portfolio-template"
-  },
-  {
-    title: "Certification 10",
-    issuer: "Issuer Name",
-    description: "Description of the certification and what it covers.",
-    link: "https://github.com/WaqasIshaque1/portfolio-template"
-  },
-  {
-    title: "Certification 11",
-    issuer: "Issuer Name",
-    description: "Description of the certification and what it covers.",
-    link: "https://github.com/WaqasIshaque1/portfolio-template"
-  },
-  {
-    title: "Certification 12",
-    issuer: "Issuer Name",
-    description: "Description of the certification and what it covers.",
-    link: "https://github.com/WaqasIshaque1/portfolio-template"
-  }
+ 
 ];
 
 function Feature() {
   return (
-    <div className="w-full py-20 lg:py-40">
+    <div className="w-full py-20 lg:py-40">ß
       <div className="container mx-auto">
         <div className="flex flex-col gap-10">
           <div className="flex gap-4 flex-col items-start">
@@ -90,7 +37,7 @@ function Feature() {
                 Professional Credentials
               </h2>
               <p className="text-lg max-w-xl lg:max-w-lg leading-relaxed tracking-tight text-muted-foreground text-left">
-                A collection of certifications and specializations in data science, machine learning, and IT.
+               Certified competencies and industry-focused specializations.
               </p>
             </div>
           </div>
@@ -102,7 +49,7 @@ function Feature() {
                 <p className="text-muted-foreground text-sm">
                   {cert.description}
                 </p>
-                <a href={cert.link} className="text-purple text-sm font-semibold hover:underline">Verify Certificate</a>
+                {/* <a href={cert.link} className="text-purple text-sm font-semibold hover:underline">Verify Certificate</a> */}
               </div>
             ))}
           </div>

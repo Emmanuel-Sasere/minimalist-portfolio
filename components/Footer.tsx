@@ -23,13 +23,12 @@ const Footer = () => {
 
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
-        Ready to elevate <span className="text-purple">your</span> digital presence through intelligent data solutions?
+       Let’s craft <span className="text-purple">value</span> from your vision through data, code, and innovation.
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">
-          Reach out to me today and let&apos;s discuss how I can help you
-          achieve your goals.
+         Let’s craft something powerful together. Reach out and let’s turn your vision into value.
         </p>
-        <a href="mailto:your-email@example.com?subject=Hey%20I%20have%20a%20project%20in%20mind">
+        <a href="mailto:emmanuelsaseretruth@gmail.com?subject=Hi%20Sasere%20I%20have%20a%20project%20in%20mind">
           <MagicButton
             title="Let's get in touch"
             icon={<FaLocationArrow />}
@@ -39,7 +38,7 @@ const Footer = () => {
       </div>
       <div className="flex mt-16 md:flex-row flex-col justify-between items-center">
         <p className="md:text-base text-sm md:font-normal font-light">
-          Copyright © 2025 Your Name
+          Copyright © 2025 Sasere
         </p>
 
         <div className="flex items-center md:gap-3 gap-6">
@@ -49,7 +48,7 @@ const Footer = () => {
               className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
             >
               <a href={info.href} target="_blank">
-                <img src={info.img} alt="icons" width={20} height={20} />
+                <img src={info.img.src} alt={info.img.alt} width={20} height={20} />
               </a>
             </div>
           ))}
