@@ -59,7 +59,7 @@ export const BentoGridItem = ({
 
   const handleCopy = () => {
     if (typeof window !== 'undefined') {
-      const text = "syahra2014@gmail.com";
+      const text = "emmanuelsaseretruth@gmail.com";
       navigator.clipboard.writeText(text);
       setCopied(true);
     }
@@ -142,7 +142,7 @@ export const BentoGridItem = ({
                 />
                 <div className="flex gap-4">
                   <a
-                    href="mailto:syahra2014@gmail.com?subject=hey%20i%20have%20a%20project%20in%20mind%20"
+                    href="mailto:emmanuelsaseretruth@gmail.com?subject=hey%20i%20have%20a%20project%20in%20mind%20"
                     target="_blank"
                   >
                     <div className="z-10">

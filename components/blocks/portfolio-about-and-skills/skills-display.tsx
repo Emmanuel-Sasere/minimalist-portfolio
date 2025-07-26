@@ -8,8 +8,8 @@ import {
   Github,
   Globe,
   Layers,
-  Cloud,
-  ChartLine,
+  // Cloud,
+  // ChartLine,
   Lightbulb,
   Palette,
   Server,
@@ -23,16 +23,20 @@ import { cn } from "@/lib/utils";
 
 // Technical Skills with proficiency levels
 const technicalSkills = [
+    // 🧠 Soft Skills
+  { name: "Resilience & Adaptability", proficiency: 90 },
+  { name: "Visionary Thinking & Initiative", proficiency: 93 },
   { name: "JavaScript/TypeScript", proficiency: 95 },
   { name: "React.js", proficiency: 90 },
-  { name: "Node.js", proficiency: 85 },
-  { name: "RESTful APIs", proficiency: 88 },
+  // { name: "Node.js", proficiency: 85 },
+  // { name: "RESTful APIs", proficiency: 88 },
   { name: "Version Control (Git)", proficiency: 92 },
   { name: "Software Architecture", proficiency: 80 },
   { name: "Debugging", proficiency: 90 },
   { name: "Agile Methodologies", proficiency: 85 },
   { name: "Code Optimization", proficiency: 88 },
   { name: "Cross-browser Compatibility", proficiency: 82 },
+ 
 ];
 
 // Tools categorized by type
@@ -49,18 +53,18 @@ const tools = [
       { name: "Redux", icon: <Layers /> },
     ],
   },
-  {
-    category: "Backend",
-    icon: <Server className="h-5 w-5" />,
-    items: [
-      { name: "Node.js", icon: <Server /> },
-      { name: "Express", icon: <Server /> },
-      { name: "PostgreSQL", icon: <Database /> },
-      { name: "MongoDB", icon: <Database /> },
-      { name: "GraphQL", icon: <Code /> },
-      { name: "REST API", icon: <Globe /> },
-    ],
-  },
+  // {
+  //   category: "Backend",
+  //   icon: <Server className="h-5 w-5" />,
+  //   items: [
+  //     { name: "Node.js", icon: <Server /> },
+  //     { name: "Express", icon: <Server /> },
+  //     { name: "PostgreSQL", icon: <Database /> },
+  //     { name: "MongoDB", icon: <Database /> },
+  //     { name: "GraphQL", icon: <Code /> },
+  //     { name: "REST API", icon: <Globe /> },
+  //   ],
+  // },
   {
     category: "DevOps & Tools",
     icon: <Terminal className="h-5 w-5" />,
@@ -78,7 +82,7 @@ const tools = [
     icon: <Smartphone className="h-5 w-5" />,
     items: [
       { name: "React Native", icon: <Smartphone /> },
-      { name: "Flutter", icon: <Smartphone /> },
+      // { name: "Flutter", icon: <Smartphone /> },
       { name: "iOS", icon: <Smartphone /> },
       { name: "Android", icon: <Smartphone /> },
       { name: "Firebase", icon: <Database /> },
@@ -121,8 +125,7 @@ export default function SkillsDisplay() {
             Skills & Technologies
           </h2>
           <p className="text-muted-foreground mx-auto mt-4 max-w-2xl text-lg">
-            A comprehensive overview of my technical skills, proficiency levels,
-            and the tools I use to create exceptional digital experiences.
+           A detailed overview of my technical expertise, proficiency levels, and the tools I leverage to craft outstanding digital experiences.
           </p>
         </div>
 
