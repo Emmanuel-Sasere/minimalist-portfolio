@@ -12,7 +12,7 @@ Turning ideas into fast, scalable apps with React Native, TypeScript, Supabase, 
   keywords: ['Frontend Engineer', 'React Native Developer', 'TypeScript', 'Supabase', 'Mobile App Developer', 'Fullstack Developer', 'FastAPI', 'Software Engineer', 'Scalable Apps', 'Clean Code', 'UI/UX', 'Tech Innovator']
 };
 
-export const siteUrl = "https://sasere.vercel.app";
+
 
 export default function RootLayout({
   children,
