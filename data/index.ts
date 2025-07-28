@@ -84,14 +84,14 @@ export const navItems = [
       techTags: ["React.js", "Tailwind CSS", "API Integration", "Git", "Form Handling"],
       link: "lcrng.com",
     },
-    // {
-    //   id: 3,
-    //   title: "Sample Project 3",
-    //   des: "A sample project description. Replace this with details about your project, its purpose, and key features.",
-    //   img: "https://placehold.co/600x400",
-    //   techTags: ["Tech 1", "Tech 2", "Tech 3"],
-    //   link: "#",
-    // },
+    {
+      id: 3,
+      title: "Workfront Summit",
+      des: "A sample project description. Replace this with details about your project, its purpose, and key features.",
+      img: "/workfront.png",
+      techTags: ["React.js", "Tailwind css", "Git"],
+      link: "workfront.talenvo.co/",
+    },
     // {
     //   id: 4,
     //   title: "Sample Project 4",
